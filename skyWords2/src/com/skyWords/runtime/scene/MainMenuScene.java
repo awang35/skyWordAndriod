@@ -27,7 +27,7 @@ public class MainMenuScene extends BaseScene implements IOnMenuItemClickListener
 
 	@Override
 	public void onBackKeyPressed() {
-		 System.exit(0);
+		 System.exit(0); // what to do when the back key is pressed
 		
 	}
 
@@ -85,6 +85,7 @@ public class MainMenuScene extends BaseScene implements IOnMenuItemClickListener
 	        	SceneManager.getInstance().loadGameScene(engine);
 	            return true;
 	        case MENU_OPTIONS:
+	        	SceneManager.getInstance().createSplashScene(); // will bring up the splash scene again to see what it looks like
 	            return true;
 	        default:
 	            return false;

@@ -1,0 +1,49 @@
+package com.skyWords.runtime.scene;
+
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.Random;
+
+import org.andengine.entity.Entity;
+
+public class TileLayer extends Entity{
+	private LinkedList tiles;
+	public static TileLayer instance;
+	public int tileCount;
+	
+	public TileLayer()
+	{
+		tiles = new LinkedList();
+		instance = this;
+		tileCount = Random.nextInt(6);
+	}
+	
+	public TileLayer(int x)
+	{
+		tiles = new LinkedList();
+		instance = this;
+		tileCount = x;
+		restart();
+	}
+	
+	public TileLayer getSharedInstance()
+	{
+		return instance;
+	}
+	
+	public static boolean isEmpty()
+	{
+		if(instance.tiles.size() == 0)
+			return true;
+		else
+			return false;
+	}
+	
+	public static Iterator getIterator()
+	{
+		return instance.tiles.iterator();
+	}
+	
+	
+
+}

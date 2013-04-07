@@ -1,0 +1,5 @@
+package com.skyWords.runtime.scene;
+
+public class GameLoopUpdateHandler {
+
+}

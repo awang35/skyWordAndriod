@@ -1,0 +1,11 @@
+package com.skyWords.runtime.scene;
+
+import org.andengine.engine.handler.IUpdateHandler;
+
+public class GameLoopUpdateHandler implements IUpdateHandler{
+	public void onUpdate(float pSecondsElapsed)
+	{
+		((GameScene)SkyWordsActivity.getSharedInstance().mCurrentScene).moveShip();
+	}
+
+}

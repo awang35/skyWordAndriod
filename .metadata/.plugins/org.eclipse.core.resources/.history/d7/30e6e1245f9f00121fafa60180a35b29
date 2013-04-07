@@ -1,0 +1,8 @@
+package com.skyWords.runtime.scene;
+
+import org.andengine.engine.handler.IUpdateHandler;
+
+public class GameLoopUpdateHandler implements IUpdateHandler{
+	
+
+}

@@ -1,2 +1,25 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<qualifiedTypeNameHistroy/>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="org.andengine.entity.util.FPSLogger"/>
+<fullyQualifiedTypeName name="org.andengine.opengl.font.Font"/>
+<fullyQualifiedTypeName name="org.andengine.opengl.font.FontFactory"/>
+<fullyQualifiedTypeName name="android.graphics.Typeface"/>
+<fullyQualifiedTypeName name="com.skyWords.manager.SceneManager"/>
+<fullyQualifiedTypeName name="org.andengine.entity.scene.background.Background"/>
+<fullyQualifiedTypeName name="org.andengine.engine.camera.Camera"/>
+<fullyQualifiedTypeName name="org.andengine.engine.handler.IUpdateHandler"/>
+<fullyQualifiedTypeName name="org.andengine.entity.scene.IOnSceneTouchListener"/>
+<fullyQualifiedTypeName name="org.andengine.entity.scene.Scene"/>
+<fullyQualifiedTypeName name="org.andengine.input.touch.TouchEvent"/>
+<fullyQualifiedTypeName name="org.andengine.entity.primitive.Rectangle"/>
+<fullyQualifiedTypeName name="org.andengine.entity.primitive.Polygon"/>
+<fullyQualifiedTypeName name="org.andengine.entity.modifier.LoopEntityModifier"/>
+<fullyQualifiedTypeName name="org.andengine.entity.modifier.RotationModifier"/>
+<fullyQualifiedTypeName name="java.util.LinkedList"/>
+<fullyQualifiedTypeName name="java.util.Iterator"/>
+<fullyQualifiedTypeName name="org.andengine.util.adt.pool.GenericPool"/>
+<fullyQualifiedTypeName name="java.util.Random"/>
+<fullyQualifiedTypeName name="org.andengine.entity.modifier.MoveModifier"/>
+<fullyQualifiedTypeName name="com.skyWords.runtime.SkyWordsActivity"/>
+<fullyQualifiedTypeName name="android.view.KeyEvent"/>
+</qualifiedTypeNameHistroy>
