@@ -61,7 +61,8 @@ public class SkyWordsActivity  extends BaseGameActivity{
 
 	public void onCreateScene(OnCreateSceneCallback pOnCreateSceneCallback) throws IOException
 	{
-		 SceneManager.getInstance().createSplashScene(pOnCreateSceneCallback);
+		// SceneManager.getInstance().createSplashScene(pOnCreateSceneCallback);
+		SceneManager.getInstance().createMenuScene();
 	}
 
 	public void onPopulateScene(Scene pScene, OnPopulateSceneCallback pOnPopulateSceneCallback) throws IOException
