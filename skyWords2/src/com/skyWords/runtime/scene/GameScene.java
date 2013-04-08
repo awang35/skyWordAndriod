@@ -1,5 +1,7 @@
 package com.skyWords.runtime.scene;
 
+import java.util.Iterator;
+
 import org.andengine.engine.camera.Camera;
 import org.andengine.engine.camera.hud.HUD;
 import org.andengine.entity.scene.IOnSceneTouchListener;
@@ -50,11 +52,25 @@ public class GameScene extends BaseScene implements IOnSceneTouchListener{
 	{
 		synchronized(this)
 		{
+			if(pSceneTouchEvent.isActionDown())
+			{
+				Iterator<Tile> it = TileLayer.getIterator();
+				while(it.hasNext())
+				{
+					Tile t = it.next();
+					if(t.hit(pSceneTouchEvent.getX(), pSceneTouchEvent.getY()))
+					{
+						//it.remove();
+						//break;
+					}
+				}
+			}
+			/*
 			if(pSceneTouchEvent.isActionDown()) // so it doesnt change if you press and move finger
 			{				
 				if(isGreen)
 				{
-					setBackground(new Background(Color.BLUE));
+					setBackground(new Background(Color.CYAN));
 					isGreen = false;
 				}
 				else
@@ -63,11 +79,15 @@ public class GameScene extends BaseScene implements IOnSceneTouchListener{
 					isGreen = true;
 				}
 			}
+			*/
 		}
 		return true;
 	}
 	
-	
+	public void cleaner()
+	{
+
+	}
 	
 	private void addToScore(int i)
 	{
@@ -90,7 +110,7 @@ public class GameScene extends BaseScene implements IOnSceneTouchListener{
 	}
 	private void createBackground()
 	{
-	    setBackground(new Background(Color.GREEN)); // juan changed color from blue to green like the grass
+	    setBackground(new Background(Color.CYAN)); // juan changed color
 	}
 	private void createPhysics()
 	{
@@ -121,10 +141,8 @@ public class GameScene extends BaseScene implements IOnSceneTouchListener{
 	public void disposeScene() {
 	    camera.setHUD(null);
 	    camera.setCenter(400, 240);
-
 	    // TODO code responsible for disposing scene
 	    // removing all game scene objects.
-
 	}
 
 }

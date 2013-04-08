@@ -10,13 +10,13 @@ import org.andengine.entity.modifier.MoveModifier;
 import com.skyWords.runtime.SkyWordsActivity;
 
 public class TileLayer extends Entity{
-	private LinkedList tiles;
+	private LinkedList<Tile> tiles;
 	public static TileLayer instance;
 	public int tileCount;
 	
 	public TileLayer()
 	{
-		tiles = new LinkedList();
+		tiles = new LinkedList<Tile>();
 		instance = this;
 		tileCount = (int)(Math.random()*5 + 1);
 		restart();
@@ -24,7 +24,7 @@ public class TileLayer extends Entity{
 	
 	public TileLayer(int x)
 	{
-		tiles = new LinkedList();
+		tiles = new LinkedList<Tile>();
 		instance = this;
 		tileCount = x;
 		restart();
@@ -55,7 +55,8 @@ public class TileLayer extends Entity{
 	public void purge()
 	{
 		detachChildren();
-		/*for(Tile t:tiles)
+		/*
+		for(Tile t:tiles)
 		{
 			TilePool.sharedTilePool().recyclePoolItem(t);
 		}
@@ -89,11 +90,9 @@ public class TileLayer extends Entity{
 			return false;
 	}
 	
-	public static Iterator getIterator()
+	public static Iterator<Tile> getIterator()
 	{
 		return instance.tiles.iterator();
 	}
-	
-	
 
 }
